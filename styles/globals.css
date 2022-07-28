@@ -1,16 +1,37 @@
+@font-face {
+    font-family: 'ManropeRegular';
+    src: url('../public/fonts/fonts/ManropeRegular.eot');
+    src: url('../public/fonts/fonts/ManropeRegular.eot') format('embedded-opentype'), url('../public/fonts/fonts/ManropeRegular.woff2') format('woff2'), url('../public/fonts/fonts/ManropeRegular.woff') format('woff'), url('../public/fonts/fonts/ManropeRegular.ttf') format('truetype'), url('../public/fonts/fonts/ManropeRegular.svg#ManropeRegular') format('svg');
+}
+
+:root {
+    --bg-black: rgb(25, 25, 25);
+    --text-light: rgba(255, 255, 255, 0.5);
+    --text-orange: rgb(216, 125, 74);
+    --text-orange-light: rgb(236, 184, 154);
+    --border: rgba(255, 255, 255, 0.2);
+    --bg-grey: rgb(241, 241, 241);
+    --bg-dark-grey: rgb(234, 234, 234);
+    --font-regular: 'ManropeRegular'
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-regular);
+    word-wrap: break-word;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.serviceContainer {
+    width: 100vw;
 }
