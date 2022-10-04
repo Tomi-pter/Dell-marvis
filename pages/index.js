@@ -12,6 +12,13 @@ export const Container = styled.div`
   margin: 0 auto;
 `;
 
+const Main = styled.main`
+  @media screen and (min-width: 1440px) {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+`;
+
 export default function Home() {
   return (
     <>
@@ -21,14 +28,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <Main>
         <HomeBody />
         <Container>
           <Product />
           <ProDetail />
           <Quote />
         </Container>
-      </main>
+      </Main>
     </>
   );
 }
