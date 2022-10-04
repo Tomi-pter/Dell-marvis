@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { ContactStyle } from "./styled/ContactStyled";
@@ -5,14 +6,17 @@ import { ContactStyle } from "./styled/ContactStyled";
 function Contact() {
   const phoneRegExp = /^[0-9]\d{10}$/;
 
+  const [service, setService] = useState("");
+
   return (
     <ContactStyle>
       <div className="text">
         <h1>Contact Us</h1>
         <p>
           Ready for uninterrupted power supply? Leave us a message to discuss
-          specifications for your home, office or building. If you&apos;re for
-          the most best service delivery, then you&apos;re in the right place.
+          specifications for your home, office or building. If you&apos;re
+          looking for the best service delivery, then you&apos;re in the right
+          place.
         </p>
       </div>
       <Formik
@@ -30,7 +34,7 @@ function Contact() {
             .max(11, "to long"),
         })}
         onSubmit={(values) => {
-          fetch("https://formsubmit.co/ajax/tomiaiyeniko@gmail.com", {
+          fetch("https://formsubmit.co/ajax/dellmarvissystem@gmail.com", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -65,13 +69,15 @@ function Contact() {
             <option value="select" className="default">
               Select service
             </option>
-            <option value="solar">Solar Panels</option>
-            <option value="inverter">Inverters</option>
-            <option value="battery">Batteries</option>
+            <option value="renewable energy">Renwable Energy</option>
+            <option value="security">Security</option>
+            <option value="home automation">Home Automation</option>
+            <option value="data">Data</option>
           </Field>
-          <ErrorMessage name="service" />
 
-          <button type="submit">Submit</button>
+          <button type="submit">
+            <span>Submit</span>
+          </button>
         </Form>
       </Formik>
     </ContactStyle>

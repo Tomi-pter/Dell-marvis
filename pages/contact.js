@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import dynamic from "next/dynamic";
 import Contact from "../components/contact/Contact";
 import { Container } from ".";
+import Product from "../components/index/Product";
 // import Product from "../components/index/Product";
 // import Map from "../components/contact/Map";
 
@@ -23,6 +24,7 @@ function ContactPage() {
       <Contact />
       <Container>
         <Map />
+        <Product />
       </Container>
     </>
   );

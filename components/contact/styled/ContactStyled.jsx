@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ContactStyle = styled.section`
   background-color: var(--text-orange);
+  margin-bottom: 4rem;
 
   .text {
     text-align: center;
@@ -54,7 +55,7 @@ export const ContactStyle = styled.section`
 
     button {
       cursor: pointer;
-      border: none;
+      border: 1px solid black;
       text-transform: uppercase;
       background: black;
       padding: 0.75rem 2rem;
@@ -71,6 +72,31 @@ export const ContactStyle = styled.section`
       outline-offset: 2px;
       width: auto;
       line-height: 1.2;
+      position: relative;
+      overflow: hidden;
+
+      span {
+        position: relative;
+        z-index: 2;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: -100%;
+        top: 0;
+        background-color: var(--text-orange);
+        z-index: 1;
+        transition: all 350ms;
+      }
+
+      &:hover {
+        &::after {
+          left: 0;
+        }
+      }
     }
   }
 
