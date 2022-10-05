@@ -27,6 +27,7 @@ export const QuoteStyle = styled.aside`
 
   a {
     background-color: var(--bg-black);
+    border: 1px solid black;
     text-transform: uppercase;
     padding: 0.75rem 2rem;
     font-size: 0.85rem;
@@ -42,6 +43,31 @@ export const QuoteStyle = styled.aside`
     outline-offset: 2px;
     width: auto;
     line-height: 1.2;
+    position: relative;
+    overflow: hidden;
+
+    span {
+      position: relative;
+      z-index: 2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: -100%;
+      top: 0;
+      background-color: var(--text-orange);
+      z-index: 1;
+      transition: all 350ms;
+    }
+
+    &:hover {
+      &::after {
+        left: 0;
+      }
+    }
   }
 
   @media screen and (min-width: 641px) {

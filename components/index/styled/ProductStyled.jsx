@@ -64,10 +64,18 @@ export const ProductStyle = styled.section`
     margin-block: 0;
   }
 
+  a:hover {
+    p {
+      color: var(--text-orange);
+    }
+  }
+
   @media screen and (min-width: 641px) {
     ul {
-      flex-direction: row;
-      gap: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 2rem;
+      row-gap: 3rem;
     }
 
     li:not(:first-child) {

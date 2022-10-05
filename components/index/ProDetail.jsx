@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ProDetailStyle } from "./styled/ProDetailStyled";
 import tenKVA from "../../public/saved/10kva-transparent.png";
-import battery from "../../public/saved/batter-transparent2.png";
-import solar from "../../public/saved/solar.jpg";
+import smart from "../../public/saved/smart-transparent.png";
+import router from "../../public/saved/router.png";
 
 function ProDetail() {
   return (
@@ -20,38 +20,44 @@ function ProDetail() {
               built-in MPPT solar charge controller
             </p>
             <Link href={"/"}>
-              <a>Learn more</a>
+              <a>
+                <span>Learn more</span>
+              </a>
             </Link>
           </div>
         </div>
 
         <div className="basic">
           <div className="img">
-            <Image src={battery} alt="battery" />
+            <Image src={smart} alt="smart assistant" />
           </div>
           <div className="text">
-            <h2>160ah Battery</h2>
+            <h2>Smart Assistant</h2>
             <Link href={"/"}>
-              <a>Learn More</a>
+              <a>
+                <span>Learn More</span>
+              </a>
             </Link>
           </div>
         </div>
 
         <div className="grid">
           <div className="img">
-            <Image src={solar} alt="solar" layout="responsive" />
+            <Image src={router} alt="router" layout="responsive" />
           </div>
           <div className="text">
-            <h2>Solar Panels</h2>
+            <h2>Voice and Data</h2>
             <Link href={"/"}>
-              <a>Learn More</a>
+              <a>
+                <span>Learn More</span>
+              </a>
             </Link>
           </div>
         </div>
 
         <aside>
           <h2>
-            Bringing you the <span>Best</span> electrical solutions
+            Bringing <span>Comfort</span> to your doorsteps
           </h2>
           <p>
             lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem

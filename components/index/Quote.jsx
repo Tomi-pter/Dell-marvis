@@ -10,7 +10,9 @@ function Quote() {
         office or building.
       </p>
       <Link href="/contact">
-        <a>Get Quote</a>
+        <a>
+          <span>Get Quote</span>
+        </a>
       </Link>
     </QuoteStyle>
   );

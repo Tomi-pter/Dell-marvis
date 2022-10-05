@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ProductStyle } from "./styled/ProductStyled";
-import solar from "../../public/saved/solar-transparent.png";
-import inverter from "../../public/saved/inverter2.png";
-import battery from "../../public/saved/batter-transparent3.png";
+import solar from "../../public/saved/solar-black-removebg-preview.png";
+import security from "../../public/saved/cctv-transparent.png";
+import home from "../../public/saved/smart-transparent.png";
+import data from "../../public/saved/router-black-removebg-preview.png";
 import arrow from "../../public/saved/icon-right-arrow.svg";
 
 function Product() {
@@ -11,13 +12,13 @@ function Product() {
     <ProductStyle>
       <ul>
         <li>
-          <Link href="/" passHref>
+          <Link href="/renewable" passHref>
             <a>
               <div className="container">
                 <div className="img">
                   <Image src={solar} alt="solar" width={135} height={100} />
                 </div>
-                <h2>Solar Panels</h2>
+                <h2>Renewable Energy</h2>
                 <div className="learn">
                   <p>Learn More</p>
                   <Image src={arrow} alt="" layout="intrinsic" />
@@ -27,18 +28,18 @@ function Product() {
           </Link>
         </li>
         <li>
-          <Link href="/" passHref>
+          <Link href="/security" passHref>
             <a>
               <div className="container">
                 <div className="img">
                   <Image
-                    src={inverter}
+                    src={security}
                     alt="inverter"
                     width={135}
                     height={100}
                   />
                 </div>
-                <h2>Inverters</h2>
+                <h2>Security</h2>
                 <div className="learn">
                   <p>Learn More</p>
                   <Image src={arrow} alt="" layout="intrinsic" />
@@ -48,13 +49,13 @@ function Product() {
           </Link>
         </li>
         <li>
-          <Link href="/" passHref>
+          <Link href="/homeAuto" passHref>
             <a>
               <div className="container">
                 <div className="img">
-                  <Image src={battery} alt="battery" width={135} height={100} />
+                  <Image src={home} alt="battery" width={135} height={100} />
                 </div>
-                <h2>Batteries</h2>
+                <h2>Home Automation</h2>
                 <div className="learn">
                   <p>Learn More</p>
                   <Image src={arrow} alt="" layout="intrinsic" />
@@ -63,14 +64,14 @@ function Product() {
             </a>
           </Link>
         </li>
-        {/* <li>
-          <Link href="/" passHref>
+        <li>
+          <Link href="/data" passHref>
             <a>
               <div className="container">
                 <div className="img">
-                  <Image src={solar} alt="solar" width={135} height={100} />
+                  <Image src={data} alt="solar" width={135} height={120} />
                 </div>
-                <h2>Security Systems</h2>
+                <h2>Data</h2>
                 <div className="learn">
                   <p>Learn More</p>
                   <Image src={arrow} alt="" layout="intrinsic" />
@@ -78,7 +79,7 @@ function Product() {
               </div>
             </a>
           </Link>
-        </li> */}
+        </li>
       </ul>
     </ProductStyle>
   );

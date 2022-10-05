@@ -38,6 +38,7 @@ export const ProDetailStyle = styled.section`
   a {
     text-transform: uppercase;
     background: black;
+    border: 1px solid black;
     padding: 0.75rem 2rem;
     font-size: 0.85rem;
     display: inline-block;
@@ -52,6 +53,31 @@ export const ProDetailStyle = styled.section`
     outline-offset: 2px;
     width: auto;
     line-height: 1.2;
+    position: relative;
+    overflow: hidden;
+
+    span {
+      position: relative;
+      z-index: 2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: -100%;
+      top: 0;
+      background-color: var(--text-orange);
+      z-index: 1;
+      transition: all 350ms;
+    }
+
+    &:hover {
+      &::after {
+        left: 0;
+      }
+    }
   }
 
   .basic {
@@ -82,9 +108,18 @@ export const ProDetailStyle = styled.section`
     }
 
     a {
-      background: transparent;
-      color: black;
+      background-color: var(--bg-dark-grey);
       border: 1px solid black;
+      color: black;
+      transition: color 350ms;
+
+      &::after {
+        background-color: black;
+      }
+
+      &:hover {
+        color: white;
+      }
     }
   }
 
@@ -100,10 +135,19 @@ export const ProDetailStyle = styled.section`
     }
 
     a {
-      background: transparent;
-      color: black;
+      background-color: var(--bg-dark-grey);
       border: 1px solid black;
+      color: black;
       margin: 0;
+      transition: color 350ms;
+
+      &::after {
+        background-color: black;
+      }
+
+      &:hover {
+        color: white;
+      }
     }
 
     .text {
@@ -167,8 +211,8 @@ export const ProDetailStyle = styled.section`
         left: 10%;
       }
       .img {
-        top: -8rem;
-        right: -18rem;
+        top: -5rem;
+        right: -16.5rem;
       }
     }
 
