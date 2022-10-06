@@ -7,6 +7,7 @@ export const QuoteStyle = styled.aside`
   border-radius: 0.5rem;
   color: white;
   text-align: center;
+  overflow: hidden;
 
   h2 {
     font-weight: 700;
