@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HeaderStyle = styled.header`
   background-color: var(--bg-black);
-  /* background-color: white; */
+  background-color: white;
 `;
 
 export const NavStyle = styled.nav`
@@ -15,7 +15,7 @@ export const NavStyle = styled.nav`
   border-bottom: 1px solid var(--border);
   background-color: inherit;
   color: white;
-  /* color: black; */
+  color: black;
 
   button {
     background: none;
@@ -37,8 +37,16 @@ export const NavStyle = styled.nav`
     z-index: 20;
   }
 
+  .navItems svg {
+    fill: black;
+  }
+
   .logo {
     width: 200px;
+
+    /* .desktop {
+      background-color: white;
+    } */
     /* height: 80px; */
 
     /* .mobile {

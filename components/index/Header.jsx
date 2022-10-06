@@ -1,8 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { HeaderStyle, NavStyle } from "./styled/HeaderStyled";
 import Menu from "../../public/shared/mobile/icon-hamburger.svg";
 import Close from "../../public/shared/mobile/icon-close.svg";
+import logo from "../../public/saved/logo.png";
+import logoMobile from "../../public/saved/logo_mobile.png";
 import Product from "./Product";
 
 function Header({ children }) {
@@ -26,7 +29,14 @@ function Header({ children }) {
     <>
       <HeaderStyle>
         <NavStyle>
-          <div className="logo">logo</div>
+          <div className="logo">
+            <div className="desktop">
+              <Image src={logo} alt="dell marvis" />
+            </div>
+            {/* <div className="mobile">
+              <Image src={logoMobile} alt="dell marvis" />
+            </div> */}
+          </div>
           <div className="navItems">
             <button onClick={opened ? closeNav : openNav}>
               <Image
@@ -35,10 +45,31 @@ function Header({ children }) {
               />
             </button>
             <ul className="desktop">
-              <li>Home</li>
-              <li>Inverters</li>
-              <li>Batteries</li>
-              <li>Solar Panels</li>
+              <li>
+                <Link href="/">
+                  <a>Home</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/renewable">
+                  <a>Renewable Energy</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/security">
+                  <a>Security</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/homeAuto">
+                  <a>Home Automation</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/data">
+                  <a>Data</a>
+                </Link>
+              </li>
             </ul>
           </div>
           <div className="dim" onClick={closeNav}></div>
