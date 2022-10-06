@@ -128,6 +128,7 @@ export const ProDetailStyle = styled.section`
     grid-gap: 1.5rem;
     grid-template-columns: 1fr;
     margin-top: 1.5rem;
+    overflow: hidden;
 
     .img {
       overflow: hidden;
@@ -188,6 +189,10 @@ export const ProDetailStyle = styled.section`
       font-size: 0.9375rem;
       color: rgba(0, 0, 0, 0.5);
     }
+  }
+
+  .dell {
+    overflow: hidden;
   }
 
   @media screen and (min-width: 641px) {
